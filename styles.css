@@ -1,0 +1,26 @@
+html, body { height: 100vh; }
+
+.container {
+  flex: 1;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.container span {
+  font-size: 2rem;
+  color: lightpink;
+  
+}
+
+.container img {
+  width: 200px;
+  height: 200px;
+}
+
+.container h2 {
+  font-size: 1rem;
+  color: red;
+}
