@@ -1,7 +1,9 @@
 function tillValentinesDay() {
   setInterval(function () {
     var today = new Date();
-    var valentinesDay = new Date("2024-02-14");
+
+    // Valentines day 2024 in Mountain Time
+    var valentinesDay = new Date("2024-02-14T00:00:00-07:00");
 
     var timeDiff = valentinesDay - today;
 
