@@ -1,20 +1,38 @@
-function tillValentinesDay() {
-  setInterval(function () {
-    var today = new Date();
+function navigateToNo() {
+  window.location.href = "no.html";
+}
 
-    // Valentines day 2024 in Mountain Time
-    var valentinesDay = new Date("2024-02-14T00:00:00-07:00");
+function navigateToNoAgain() {
+  window.location.href = "noAgain.html";
+}
 
-    var timeDiff = valentinesDay - today;
+function navigateToMaybe() {
+  window.location.href = "maybe.html";
+}
 
-    var days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-    var hours = Math.floor(
-      (timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-    );
-    var minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+function navigateToYes() {
+  window.location.href = "yes.html";
+}
 
-    document.getElementById("countdown").innerHTML =
-      days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-  }, 1000);
+function navigateToGift() {
+  window.location.href =
+    "https://shop.subtronics.net/products/subtronics-tesseract-x-aaron-brooks-baseball-jersey";
+}
+
+let clicked = 0;
+
+function noPress() {
+  let button = document.getElementById("noButton2");
+  let yesButton = document.getElementById("yesButton");
+  //Move button Randomly so it cannot be clicked
+  button.style.position = "absolute";
+  button.style.left = Math.random() * 65 + "%";
+  button.style.top = Math.random() * 65 + "%";
+
+  clicked++;
+
+  if (clicked > 5) {
+    yesButton.style.display = "inline-block";
+    button.style.display = "none";
+  }
 }
